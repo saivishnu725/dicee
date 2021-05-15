@@ -52,11 +52,10 @@ class _DiceAppState extends State<DiceApp> {
                 onPressed: () {
                   setState(() {
                     var rg = Random();
-                    dice1 = rg.nextInt(6);
-                    if (dice1 == 0) {
-                      dice1 = 1;
-                    }
+                    dice1 = rg.nextInt(6) + 1;
+                    dice2 = rg.nextInt(6) + 1;
                     debugPrint('1 is $dice1');
+                    debugPrint('2 is $dice2 \n');
                   });
                 },
               ),
@@ -73,11 +72,10 @@ class _DiceAppState extends State<DiceApp> {
                 onPressed: () {
                   setState(() {
                     var rg = Random();
-                    dice2 = rg.nextInt(6);
-                    if (dice2 == 0) {
-                      dice2 = 1;
-                    }
-                    debugPrint('2 is $dice2');
+                    dice1 = rg.nextInt(6) + 1;
+                    dice2 = rg.nextInt(6) + 1;
+                    debugPrint('1 is $dice1');
+                    debugPrint('2 is $dice2 \n');                    
                   });
                 },
               ),
