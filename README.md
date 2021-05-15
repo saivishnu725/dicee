@@ -1,16 +1,36 @@
 # dicee
 
-Learning Angela Yu's course on Flutter to create diceepp. 
+Flutter Angela Yu's course to create dicee app.
 
-## Getting Started
+## Install/Run
 
-This project is a starting point for a Flutter application.
+Step 1a -
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+# To clone using HTTP
+git clone https://github.com/saivishnu725/dicee.git
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Step 1b -
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+# To clone using ssh
+git clone git@github.com:saivishnu725/dicee.git
+```
+
+Step 2 -
+
+```bash
+cd mi_card
+flutter run -d <device> # device can be Android/ iOS (This is a headache)/ Chrome/ Desktop (Linux,Windows 10, Mac OS)
+```
+
+Step 3-
+
+```bash
+# Just kidding, enjoy the app already.
+```
+
+## License
+
+[GNU General Public License v2.0](https://choosealicense.com/licenses/gpl-2.0/).
