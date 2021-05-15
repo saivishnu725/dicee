@@ -11,16 +11,16 @@ void main() {
   );
 }
 
-List name = [
-  'assets/dice1.png',
-  'assets/dice2.png',
-  'assets/dice3.png',
-  'assets/dice4.png',
-  'assets/dice5.png',
-  'assets/dice6.png'
-];
-int dice1 = 0;
-int dice2 = 1;
+// List name = [
+//   'assets/dice1.png',
+//   'assets/dice2.png',
+//   'assets/dice3.png',
+//   'assets/dice4.png',
+//   'assets/dice5.png',
+//   'assets/dice6.png'
+// ];
+int dice1 = 1;
+int dice2 = 2;
 
 class DiceApp extends StatefulWidget {
   // DiceApp({Key key}) : super(key: key);
@@ -46,12 +46,16 @@ class _DiceAppState extends State<DiceApp> {
             Expanded(
               child: TextButton(
                 child: Image.asset(
-                  '${name[dice1]}',
+                  // '${name[dice1]}',
+                  'assets/dice$dice1.png',
                 ),
                 onPressed: () {
                   setState(() {
                     var rg = Random();
                     dice1 = rg.nextInt(6);
+                    if (dice1 == 0) {
+                      dice1 = 1;
+                    }
                     debugPrint('1 is $dice1');
                   });
                 },
@@ -63,12 +67,16 @@ class _DiceAppState extends State<DiceApp> {
             Expanded(
               child: TextButton(
                 child: Image.asset(
-                  '${name[dice2]}',
+                  // '${name[dice2]}',
+                  'assets/dice$dice2.png',
                 ),
                 onPressed: () {
                   setState(() {
                     var rg = Random();
                     dice2 = rg.nextInt(6);
+                    if (dice2 == 0) {
+                      dice2 = 1;
+                    }
                     debugPrint('2 is $dice2');
                   });
                 },
