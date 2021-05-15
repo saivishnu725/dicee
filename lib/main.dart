@@ -30,6 +30,16 @@ class DiceApp extends StatefulWidget {
 }
 
 class _DiceAppState extends State<DiceApp> {
+  void set() {
+    setState(() {
+      var rg = Random();
+      dice1 = rg.nextInt(6) + 1;
+      dice2 = rg.nextInt(6) + 1;
+      debugPrint('1 is $dice1');
+      debugPrint('2 is $dice2 \n');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,15 +59,7 @@ class _DiceAppState extends State<DiceApp> {
                   // '${name[dice1]}',
                   'assets/dice$dice1.png',
                 ),
-                onPressed: () {
-                  setState(() {
-                    var rg = Random();
-                    dice1 = rg.nextInt(6) + 1;
-                    dice2 = rg.nextInt(6) + 1;
-                    debugPrint('1 is $dice1');
-                    debugPrint('2 is $dice2 \n');
-                  });
-                },
+                onPressed: () => set(),
               ),
             ),
             SizedBox(
@@ -69,15 +71,7 @@ class _DiceAppState extends State<DiceApp> {
                   // '${name[dice2]}',
                   'assets/dice$dice2.png',
                 ),
-                onPressed: () {
-                  setState(() {
-                    var rg = Random();
-                    dice1 = rg.nextInt(6) + 1;
-                    dice2 = rg.nextInt(6) + 1;
-                    debugPrint('1 is $dice1');
-                    debugPrint('2 is $dice2 \n');                    
-                  });
-                },
+                onPressed: () => set(),
               ),
             ),
           ],
